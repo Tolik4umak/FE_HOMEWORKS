@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+*{
+
+    --maintextcolor: rgb(172, 164, 164);
+    --unactivetextcolor: rgb(76, 71, 71);
+    --toreviewcolor: #608cb6c7;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #22262c;
+    font-family: 'Aboreto', cursive;
+    list-style: none;
+    font-weight: 900;
+}
+a{
+    color: inherit;
+}
+h1{
+    font-size: calc(3vw + 10px);
+}
+h2{
+    font-size: calc(6vw + 10px);
+    color: var(--toreviewcolor)
+}
+h1, h2{
+    margin-block: 0.1em;
+}
+.student{
+    font-size: calc(2.4vw + 5px);
+    margin-block-start: 0.1em;
+    margin-block-end: calc(15vw - 10%);
+}
+.reviev{
+    font-size: calc(1.5vw + 5px);
+    text-decoration: underline;
+}
+.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:  var(--maintextcolor);
+}
+.homeworkslist{
+    padding: 0;
+    margin: 0;
+}
+.homework{
+    color: var(--unactivetextcolor);
+    font-size: calc(1.5vw + 5px);
+    text-align: center;
+    margin-block: 15px;
+    padding: 10px;
+    width: calc(30vw + 15px);
+    border: 1px solid var(--unactivetextcolor);
+    border-radius: 10px;
+}
+.homework:hover{
+    color: var(--maintextcolor);
+    border: 1px solid var(--maintextcolor);
+}
+.date{
+    font-size: smaller;
+    font-weight: 100;
+    text-decoration: underline;
+
+}
+.forreview{
+    color: var(--maintextcolor);
+    border: 1px solid var(--maintextcolor);
+    animation: forreview 1.3s linear infinite;
+
+}
+.forreview:hover{
+    animation: none;  
+}
+
+@keyframes forreview {
+    0% {
+        transform: scale(0.97);
+        
+    }
+    50% {
+        transform: scale(1.03);
+        color: var(--toreviewcolor);
+        border: 1px solid var(--toreviewcolor);
+    }
+    100% {
+        transform: scale(0.97);
+    }
+}
+

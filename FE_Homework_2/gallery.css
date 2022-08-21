@@ -75,7 +75,7 @@
     margin: 200px auto;
     position: relative;
     perspective: 1000px;
-   
+   display: none;
 }
 .room{
     transform-style: preserve-3d;
