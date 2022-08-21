@@ -1,0 +1,253 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+
+
+
+
+/* COMMON STYLES */
+* {
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+    --menuline: 1px;
+    --textcolorblue: #4285f4;
+    --textcolorred: #ea4335;
+    --textcoloryello: #fbbc05;
+    --textcolorgreen: #34a853;
+    --backgroundcolor: #181818ea;
+}
+
+body {
+    background: url(https://n1s1.hsmedia.ru/e1/cb/8f/e1cb8fc96100887bf43a46d472601976/2560x1708_0xac120003_2632437351653327521.jpeg) 50%/cover fixed;
+    margin: 0;
+    font-family: 'Lobster', cursive;
+    padding: 0;
+    margin: 0;
+}
+
+.wrap {
+    background-color: var(--backgroundcolor);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header section:nth-of-type(1) {
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 150px;
+}
+
+section {
+    padding: 30px 40px;
+    max-width: 900px;
+    min-width: 300px;
+    margin: 10px auto;
+    background-color: rgba(255, 255, 255, 0.096);
+
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin-top: 0;
+}
+h3{
+    text-decoration: underline;
+}
+p {
+    margin: 5px 0;
+    text-align: justify;
+    text-indent: 15px;
+}
+
+
+
+
+/* LOGO STYLES */
+h1 span:nth-child(1),
+h1 span:nth-child(4) {
+    color: var(--textcolorblue);
+}
+h1 span:nth-child(2),
+h1 span:nth-child(6) {
+    color: var(--textcolorred);
+}
+h1 span:nth-child(3) {
+    color: var(--textcoloryello);
+}
+h1 span:nth-child(5) {
+    color: var(--textcolorgreen);
+}
+
+
+
+
+/* NAV */
+.navigation {
+    z-index: 1;
+    padding: 0;
+    position: sticky;
+    top: 0;
+    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 50px;
+    /* background-color: #34a853; */
+}
+.navigation_line {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+.navigation_line>li {
+    flex: 1 1 22%;
+    text-align: center;
+    position: relative;
+    border-left: 1px solid #fff;
+}
+.navigation_line li:last-child {
+    border-right: 1px solid #fff;
+}
+.navigation_line>li:hover .menu_line {
+    width: 100%;
+    background-color: #ffffff;
+}
+.navigation_line>li:after {
+    content: "";
+    display: block;
+    height: var(--menuline);
+    width: 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+}
+.navigation_line>li:hover:after {
+    content: "";
+    display: block;
+    height: var(--menuline);
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+.navigation_line a {
+    text-decoration: none;
+    display: block;
+    line-height: 50px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.navigation_line a:hover {
+    background-color: #fff;
+    color: #000000;
+    transition: 0.6s ease-in;
+}
+.menu_line {
+    display: block;
+    height: var(--menuline);
+    width: 0%;
+    transition: 0.5s;
+}
+
+
+
+
+
+/* MAIN STYLES */
+.paralax1 {
+    height: 300px;
+    background: url(https://ir.4sqi.net/img/general/original/10008626_iE1NqCL7QjsmMga18VYBavQIc9-3wRhmmKvz3meu6Ak.jpg) 50%/ auto 100% no-repeat fixed;
+    margin: -10px auto;
+}
+.paralax2 {
+    height: 300px;
+    background: url(https://www.ixbt.com/img/n1/news/2021/9/1/6BFE0AC4-902C-4800-A1F6-D2FEA25A961B_large.jpeg) 50%/ auto 100% no-repeat fixed;
+    margin: -10px auto;
+}
+
+.photos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photos>div {
+    padding: 5px;
+    flex: 0 1 33.33333%;
+}
+
+.photos img {
+    width: 100%;
+}
+
+@media (max-width: 615px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    .photos>div {
+        padding: 5px;
+        flex: 100%;
+    }
+    .navigation_line{
+        padding: 0 50px;
+    }
+    .navigation li {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .navigation_line>li {
+     border-left: none;
+    }
+    .navigation_line>li:last-child {
+        border-right: none;
+    }
+    .navigation_line a {
+        line-height: 40px;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+}
+
+
+
+
+/* ANKER ARROW */
+.anker {
+    height: 0;
+    width: 0;
+    border-bottom: 50px solid #ffffff;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 17%;
+    animation: anker 2s infinite ease;
+}
+
+@keyframes anker {
+    50% {
+        transform: translateY(10px)
+    }
+}
+
+.anker:active {
+    transform: scale(0.7);
+}
+
+
+.test{
+    background-color: #1f1f1f;
+}
