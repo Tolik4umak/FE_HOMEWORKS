@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Twitttter App</title>
+
+    <style>
+      .card {
+        padding: 1rem 2rem;
+        width: 80%;
+        border-radius: 12px;
+      }
+      .card__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3%;
+      }
+      .card__avatar{
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+      .card__user {
+        display: flex;
+        align-items: center;
+      }
+
+
+
+      .card--light{
+        background: rgb(241 241 254);
+        border: 1px solid #dfdfdf;
+        color: #36363f;
+      }
+      .card--dark{
+        background: #36363f;
+        border: 1px solid #1f1f1f;
+        color: #dfdfdf;
+      }
+
+      .card__header--reversed{
+        flex-direction: row-reverse;
+      }
+
+
+      .card__avatar--small {
+        width: 50px;
+        height: 50px;
+      }
+      .card__avatar--medium{
+        width: 100px;
+        aspect-ratio: 1;
+      }
+      .card__avatar--large{
+        width: 150px;
+        aspect-ratio: 1;
+      }
+
+
+      .card__name--small{
+        font-size: calc(1vw + 15px);
+      }
+      .card__name--medium{
+        font-size: calc(1vw + 20px);
+      }
+      .card__name--large{
+        font-size: calc(1.5vw + 20px);
+      }
+
+
+      .card__date--small{
+        font-size: calc(0.5vw + 10px);
+      }
+      .card__date--medium{
+        font-size: calc(0.8vw + 10px);
+      }
+      .card__date--large{
+        font-size: calc(1vw + 12px);
+      }
+      .card__date--bold{
+        font-weight: 900;
+      }
+
+
+      .card__message--justify{
+        text-align: justify;
+      }
+      .card__message--left{
+        text-align: left;
+      }
+      .card__message--right{
+        text-align: right;
+      }
+      .card__message--center{
+        text-align: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- БЭМ: Блок__Элемент--Модификатор -->
+    <div class="card card--important card--dark">
+      <div class="card__header card__header--reversed">
+
+        <div class="card__user">
+          <img
+            class="card__avatar card__avatar--medium"
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt=""
+          />
+
+          <h2 class="card__name card__name--medium">Anatolii Chumak</h2>
+        </div>
+
+        <span class="card__date card__date--bold card__date--medium"> Aug 23, 2022 </span>
+      </div>
+
+      <div class="card__content">
+        <p class="card__message card__message--justify">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          quibusdam porro ipsa facilis dolores neque rerum esse dicta mollitia
+          dolore inventore perspiciatis unde id, distinctio beatae odit vel
+          voluptas soluta!
+        </p>
+      </div>
+    </div>
+    
+  </body>
+</html>
