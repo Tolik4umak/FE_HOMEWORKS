@@ -43,8 +43,6 @@ body{
 
 
 
-
-
 /* HEADER */
 .header{
     background-color: var(--backgroundheader);
@@ -52,6 +50,7 @@ body{
     justify-content: center;
     height: calc(2vh + 70px);
     padding: 0 30px;
+
 }
 header>div{
     display: flex;
