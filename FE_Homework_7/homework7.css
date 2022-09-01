@@ -1,0 +1,54 @@
+*{
+
+    --maintextcolor: rgb(172, 164, 164);
+    --unactivetextcolor: rgb(76, 71, 71);
+    --toreviewcolor: #608cb6c7;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--maintextcolor);
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+}
+
+li, ul{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+body{
+    height: 100%;
+    background-color: #22262c;
+}
+.title{
+    margin-block: 50px;
+    text-align: center;
+}
+.wrapper{
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.answer{
+    margin-bottom: 80px;
+    font-weight: 100;
+    line-height: 1.5rem;
+    padding-inline-start: 30px;
+}
+.desc{
+    padding: 0;
+    margin: 0 0 0 20px;
+    font-size: smaller;
+}
+
+.pb{
+    margin-bottom: 15px;
+}
+code{
+    white-space: pre;
+}
+.question{
+    color: var(--toreviewcolor);
+}
