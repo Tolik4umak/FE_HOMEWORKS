@@ -4,13 +4,31 @@
     --maintextcolor: rgb(172, 164, 164);
     --unactivetextcolor: rgb(76, 71, 71);
     --toreviewcolor: #608cb6c7;
+    --backdrop: #22262c;
     scroll-behavior: smooth;
     box-sizing: border-box;
     text-decoration: none;
-    background-color: #22262c;
     font-family: 'Aboreto', cursive;
     list-style: none;
     font-weight: 900;
+}
+body{
+    background-color: var(--backdrop);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+}
+::-webkit-scrollbar {
+    width: 0px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(59, 37, 37, 0);
 }
 a{
     color: inherit;
@@ -33,6 +51,7 @@ h1, h2{
 .reviev{
     font-size: calc(1.5vw + 5px);
     text-decoration: underline;
+    margin-block-end: 2em;
 }
 .section{
     display: flex;
@@ -40,10 +59,24 @@ h1, h2{
     align-items: center;
     color:  var(--maintextcolor);
 }
+.hw{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(35vh + 150px);
+}
+.month{
+    padding-block-end: 30px;
+}
 .homeworkslist{
     padding: 0;
     margin: 0;
 }
+
+h3{
+    font-size: calc(.7vw + 5px);
+    text-align: center;
+}
+
 .homework{
     color: var(--unactivetextcolor);
     font-size: calc(1.5vw + 5px);
@@ -72,6 +105,27 @@ h1, h2{
 .forreview:hover{
     animation: none;  
 }
+
+
+main{
+    position: relative;
+}
+main::before{
+    content: "";
+    display: block;
+    background: linear-gradient(0deg, var(--backdrop) 0%, transparent 90%);
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+
+
+
+
 
 @keyframes forreview {
     0% {
