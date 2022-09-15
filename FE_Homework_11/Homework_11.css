@@ -15,7 +15,7 @@
     gap: 3px;
 }
 .calendar__item{
-    width: calc(100% / 7);
+    width: calc(100% / 7 - 3px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,4 +31,8 @@
 .calendar__item--active{
     background-color: black;
     color: #fffaf5;
+}
+
+.calendar__item:not(.calendar__item--small):hover{
+    background-color: gray;
 }
