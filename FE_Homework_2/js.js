@@ -7,7 +7,8 @@ window.onscroll = function navBarColorChange() {
         } else {
             navbar.style.backgroundColor = "#0000"
         }
-    } else {
+    } 
+    else {
         if (document.documentElement.scrollTop > 300) {
             navbar.style.backgroundColor = "var(--textcolorblue)"
         } else {
